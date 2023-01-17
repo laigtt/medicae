@@ -1,35 +1,54 @@
-﻿
-using System;
-using Vintagestory.API;
-using Vintagestory.API.Client;
+﻿using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
-using Vintagestory.API.Datastructures;
-using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
-using Vintagestory.API.Util;
 
-namespace Medicae;
-
-public class Medicae : ModSystem
+namespace Medicae
 {
-    private ICoreAPI _api;
-    private ICoreClientAPI _capi;
-    private ICoreServerAPI _sapi;
 
-    public override void Start(ICoreAPI api)
+    public class Medicae : ModSystem
     {
-        base.Start(api);
-        this._api = api;
-        if (api.Side == EnumAppSide.Server)
-            _sapi = api as ICoreServerAPI;
-        else
-            _capi = api as ICoreClientAPI;
-        
-        this._api.RegisterItemClass("ItemTourniquet", typeof(ItemTourniquet));
-        this._api.RegisterItemClass("ItemSplint", typeof(ItemSplint));
+        private ICoreAPI _api;
+        private ICoreClientAPI _capi;
+        public static ICoreServerAPI _sapi;
 
-        this._api.RegisterEntityClass("Health", new EntityProperties());
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            base.StartServerSide(api);
+            _sapi = api;
+            
+            _sapi.Event.Timer(OnInterval, 3.0);
+            
+            _sapi.RegisterEntity("ME_Player", typeof(ME_Player));
+        }
+        
+        public override void StartClientSide(ICoreClientAPI api)
+        {
+            base.StartClientSide(api);
+            _capi = api;
+            
+            _capi.RegisterEntity("ME_Player", typeof(ME_Player));
+        }
+        
+        void OnInterval()
+        {
+            _sapi.SendMessageToGroup(GlobalConstants.GeneralChatGroup, "Hello MEDICAE!", EnumChatType.AllGroups);
+        }
+    }
+
+    public class ME_Player : EntityPlayer
+    {
+        public override void OnGameTick(float dt)
+        {
+            base.OnGameTick(dt);
+
+            ReceiveDamage(new DamageSource(), 1f);
+            Medicae._sapi?.SendMessageToGroup(GlobalConstants.GeneralChatGroup, "Hello MEDICAE!", EnumChatType.AllGroups);
+        }
+
+        public override void OnHurt(DamageSource damageSource, float damage)
+        {
+            //base.OnHurt(damageSource, damage);
+        }
     }
 }
