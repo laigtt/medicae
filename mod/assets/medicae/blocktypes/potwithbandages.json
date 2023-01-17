@@ -1,0 +1,85 @@
+{
+	code: "pot-with-bandages",
+	variantgroups: [
+		{ code: "type", states: ["clean", "sterilized" ] },
+	],
+	dropsByType: {
+		"*-clean": [
+			{ type: "item", code: "game:bandage-clean", quantity: { avg: 4 }  },
+			{ type: "block", code: "game:claypot-burned", quantity: { avg: 1 }  }
+		],
+		"*-sterilized": [
+			{ type: "item", code: "game:bandage-sterilized", quantity: { avg: 4 }  },
+			{ type: "block", code: "game:claypot-burned", quantity: { avg: 1 }  }
+		]
+	},
+	behaviors: [
+		{ name: "RightClickPickup"} 
+	],
+	combustiblePropsByType: {
+		"*-clean": {
+			meltingPoint: 100,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { "type": "block", "code": "pot-with-bandages-sterilized" },
+			requiresContainer: false
+		}
+	},
+	attributes: {
+		inFirePitProps: {
+			transform: { 
+				translation: { x: 0, y: 0.125, z: 0 } 
+			},
+			useFirepitModel: "Wide"
+		},
+	},
+
+	heldTpIdleAnimation: "holdbothhands",
+	heldTpUseAnimation: "twohandplaceblock",
+	doNotRenderAtLod2: true,
+	maxstacksize: 1,
+	
+	shape: { base: "game:block/clay/pot-closed" },
+	blockmaterial: "Ceramic",
+	textures: {
+		"transparent": { base: "game:block/transparent" },
+		"ceramic": { base: "game:block/clay/pot-side" },
+		"lid": { base: "game:block/clay/pot-lid" }
+	},
+
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	drawtype: "json",
+	materialDensity: 450,
+	replaceable: 400,
+	resistance: 1.25,
+	lightAbsorption: 0,
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.28, y1: 0, z1: 0.28, x2: 0.72, y2: 0.35, z2: 0.72 },
+	selectionbox: { x1: 0.28, y1: 0, z1: 0.28, x2: 0.72, y2: 0.35, z2: 0.72 },
+	guiTransform: {
+		origin: { x: 0.5, y: 0.2, z: 0.5 },
+		scale: 2
+	},
+	groundTransform: {
+		scale: 3
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.1, z: 0.5 },
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.67, y: 0.06, z: -0.5 },
+		rotation: { x: -52, y: 20, z: -110 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.76
+	}
+}

@@ -1,0 +1,30 @@
+[
+	{
+		ingredientPattern: "WPB",
+		ingredients: {
+			"W": { 
+				type: "block", 
+				code: "game:woodbucket"
+			},
+			"P": { 
+				type: "block", 
+				code: "game:claypot-burned"
+			},
+			"B": { 
+				type: "item", 
+				code: "game:bandage-clean", 
+				quantity: 4
+			}
+		},
+		width: 3,
+		height: 1,
+		attributes: {
+			liquidContainerProps: {
+				requiresContent: { type: "item", code: "waterportion" },
+				requiresLitres: 1
+			}
+		},
+		shapeless: true,
+		output: { type: "block", code: "pot-with-bandages-clean"  }
+	},
+]

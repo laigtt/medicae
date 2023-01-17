@@ -1,0 +1,20 @@
+{
+  "game:item-bandage-clean": "Bandage",
+  "game:itemdesc-bandage-clean": "A strip of cloth can be used to cover wounds or slow down bleeding.",
+  "game:item-bandage-sterilized": "Sterilized Bandage",
+  "game:itemdesc-bandage-sterilized": "A strip of sterilized cloth can be used to cover wounds or slow down bleeding without any risk of infection. Sterilization lasts for 24 hours.",
+  
+  "block-pot-with-bandages-clean": "Pot with bandages",
+  "blockdesc-pot-with-bandages-clean": "A pot filled with water and bandages. Boil it in a firepit to sterilize them.",
+  "block-pot-with-bandages-sterilized": "Pot with bandages (sterilized)",
+  "blockdesc-pot-with-bandages-sterilized": "A pot filled with boiled water and sterile bandages. Sterilization lasts for 24 hours.",
+
+  "item-tourniquet": "Tourniquet",
+  "itemdesc-tourniquet": "A bandage combined with a stick, it's much more effective at stopping bleeding but can only be used on limbs.",
+  
+  "item-splint": "Splint",
+  "itemdesc-splint": "A device used to immobilize a broken limb.",
+  
+  "item-makeshiftbandage": "Makeshift Bandage",
+  "itemdesc-makeshiftbandage": "A makeshift bandage."
+}
