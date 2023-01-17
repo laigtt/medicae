@@ -1,0 +1,16 @@
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/Medicae.deps.json
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/Medicae.dll
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/ref/Medicae.dll
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/Medicae.pdb
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/VintagestoryAPI.dll
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/VintagestoryAPI.pdb
+/home/lait/Projects/RiderProjects/Medicae/Medicae/bin/Release/net6.0/VintagestoryAPI.xml
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.csproj.AssemblyReference.cache
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.GeneratedMSBuildEditorConfig.editorconfig
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.AssemblyInfoInputs.cache
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.AssemblyInfo.cs
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.csproj.CoreCompileInputs.cache
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.csproj.CopyComplete
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.dll
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/ref/Medicae.dll
+/home/lait/Projects/RiderProjects/Medicae/Medicae/obj/Release/net6.0/Medicae.pdb

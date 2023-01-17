@@ -1,0 +1,28 @@
+[
+  {
+    "op": "add",
+    "path": "/enabled",
+    "value": "false",
+    "file": "game:itemtypes/bandage.json"
+  },
+  {
+    "op": "remove",
+    "path": "/item-bandage-clean",
+    "file": "game:lang/en.json"
+  },
+  {
+    "op": "remove",
+    "path": "/item-bandage-dirty",
+    "file": "game:lang/en.json"
+  },
+  {
+    "op": "remove",
+    "path": "/item-bandage-alcoholed",
+    "file": "game:lang/en.json"
+  },
+  {
+    "op": "remove",
+    "path": "/itemdesc-bandage-alcoholed",
+    "file": "game:lang/en.json"
+  }
+]
